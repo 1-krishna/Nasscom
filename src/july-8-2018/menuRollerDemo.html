@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .Item{
+            cursor:hand;
+            font-family: Verdana;
+            font-size: 20;
+            font-style: normal;
+            background-color: blue;
+            color: white;
+        }
+        .Highlight{
+            cursor: hand;
+            font-family: Verdana;
+            font-size: 20;
+            font-style: italic;
+            background-color: white;
+            color: blue
+        }
+    </style>
+</head>
+<body>
+    <span class=Item onmouseover="rollOn" onmouseout="rollOff">Hello</span>
+    <span class=Item>India</span>
+    <span class=Item>World</span>
+    <span class=Item>Asia</span>
+    <span class=Item>Deoria</span>
+
+    <script>
+        function rollOn(){
+            if(window.event.srcElement.className=="Item"){
+                window.event.srcElement.className="Highlight";
+            }
+        }
+
+        document.onmouseover = rollOn;
+
+        function rollOff(){
+            if(window.event.srcElement.className="Highlight"){
+                window.event.srcElement.className="Item";
+            }
+        }
+
+        document.onmouseout = rollOff;
+
+    </script>
+</body>
+</html>

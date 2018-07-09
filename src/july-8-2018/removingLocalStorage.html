@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+        if (sessionStorage.count) {
+            sessionStorage.count = Number(sessionStorage.count) + 1
+        } else {
+            sessionStorage.count = 1
+        }
+        if (sessionStorage.count == 5) {
+
+            sessionStorage.clear();
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        document.write("This will get cleared on 5th hit</br>")
+        if (sessionStorage.count) {
+            document.write("Total hits " + sessionStorage.count)
+        }
+    </script>
+</body>
+
+</html>

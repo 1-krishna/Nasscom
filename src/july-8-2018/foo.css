@@ -1,0 +1,6 @@
+@media print{
+    body{font-size: 100pt}
+}
+@media screen{
+    body{font-size: 10pt}
+}
